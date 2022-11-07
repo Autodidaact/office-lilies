@@ -1,7 +1,6 @@
 import React from "react";
 
 function PlantCard({ plant, onDeletePlant, onUpdatePlant }) {
-  console.log(plant)
   const { id, name, price, number_in_stock, image} = plant;
 
   function handleDeleteClick() {
@@ -30,20 +29,15 @@ function PlantCard({ plant, onDeletePlant, onUpdatePlant }) {
       .then((updatedPlant) => onUpdatePlant(updatedPlant));
   }*/
 
-  return (
-    <div className="card">
-      <h2>{name}</h2>
-      <img src={image} alt={name} className="plant-image" />
-      <p>{number_in_stock} in stock </p>
-      <p>GHS{price}</p>
-      {/*<button className="like-btn" onClick={handleLikeClick}>
-        Like {"<3"}
-      </button>
-      <button className="del-btn" onClick={handleDeleteClick}>
-        Donate to GoodWill
-      </button>*/}
-    </div>
-  );
+  return(
+   <div className="card">
+     <h2>{name}</h2>
+     <img src={image} alt={name} className="plant-image" />
+     {number_in_stock <= 0 ?(<p className="out-of-stock">Out of stock</p>):(
+         <p>{number_in_stock} in stock </p>)}
+     <p>GHS{price}</p>
+   </div>
+    ); 
 }
 
 export default PlantCard;

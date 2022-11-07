@@ -24,26 +24,28 @@ function SignUp({ setUser }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
-        <label htmlFor="name">Username</label>
-        <input
-          type="text"
-          id="username"
-          autoComplete="off"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+      <div className="container">
+        <form onSubmit={handleSubmit} className="forms">
+          <h1>Sign Up</h1>
+          <label htmlFor="name">Username</label>
+          <input
+            type="text"
+            id="username"
+            autoComplete="off"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
         />
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          id="email"
-          autoComplete="off"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button type="submit">Sign Up</button>
-      </form>
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            autoComplete="off"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>  
     </div>
   );
 }

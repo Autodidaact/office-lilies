@@ -54,11 +54,28 @@ button {
   color: whitesmoke;
   font-size: 18px;
   justify-self: center;
+  margin: 1rem;
 }
+
+.admin-card {
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: auto;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #e04b52;
+}
+
 
 .buttonContainer {
   text-align: center;
   padding: 1rem;
+}
+
+.out-of-stock{
+  color: red;
 }
 
 button:hover {
@@ -75,8 +92,22 @@ button:hover {
   opacity: 0.8;
 }
 
-.add-plant-form {
+.forms {
   width: 80%;
+}
+
+form {
+  background-color: #fff8e7;
+  border: 1px solid salmon;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+}
+
+form input {
+  margin: 0.25rem 0;
 }
 
 .submit {

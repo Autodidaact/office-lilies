@@ -24,18 +24,20 @@ function Login({ setUser }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <h1>Login</h1>
-        <label htmlFor="email">Email</label>
-        <input
-          type="text"
-          id="username"
-          autoComplete="off"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button type="submit">Login</button>
-      </form>
+      <div className="container">
+        <form onSubmit={handleSubmit} className="forms">
+          <h1>Login</h1>
+          <label htmlFor="email">Email</label>
+          <input
+            type="text"
+            id="username"
+            autoComplete="off"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   );
 }
